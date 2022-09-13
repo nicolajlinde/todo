@@ -50,6 +50,9 @@ const editing = () => {
   if (todo.active === true) {
     isEditing.value = !isEditing.value;
     // console.log(editInput.value);
+    if (isEditing.value === true) {
+      focusInput.value?.focus();
+    }
   }
 };
 
@@ -89,9 +92,6 @@ onUpdated(() => {
   // }
   console.log("updated");
   console.log(editInput.value);
-  if (isEditing.value === true) {
-    focusInput.value?.focus();
-  }
 });
 </script>
 
